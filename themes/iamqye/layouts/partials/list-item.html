@@ -1,0 +1,40 @@
+<div class="item">
+
+    {{ $.Scratch.Set "link" .RelPermalink }}
+    {{ with .Params.repo }}
+        {{ $repoHost := default "github" $.Params.repoHost }}
+        {{ if eq "github" $repoHost }}
+            {{ printf "https://github.com/%s/%s/" $.Site.Params.githubUsername . | $.Scratch.Set "link" }}
+        {{ else if eq "gitlab" $repoHost }}
+            {{ printf "https://gitlab.com/%s/%s/" $.Site.Params.gitlabUsername . | $.Scratch.Set "link" }}
+        {{ else if eq "bitbucket" $repoHost }}
+            {{ printf "https://bitbucket.org/%s/%s/" $.Site.Params.bitbucketUsername . | $.Scratch.Set "link" }}
+        {{ end }}
+    {{ end }}
+    {{ with .Params.link }} {{ $.Scratch.Set "link" . }} {{ end }}
+
+    {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "pub_date" }}
+    {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
+    {{ with .ReadingTime }} {{ $.Scratch.Set "read_time" . }} {{ end }}
+    
+
+    <h3><a href='{{ .Scratch.Get "link" }}'>{{ .Title }}</a></h3>
+    <p class="dateandtime">
+		<span class='fa fa-calendar-minus-o'></span> {{ $.Scratch.Get "pub_date" }} 
+		<span class='fa fa-clock-o'></span> {{ $.Scratch.Get "read_time" }} minutes
+	</p>
+    <p>{{ $.Scratch.Get "subtitle" }}</p>
+
+    {{ range.Params.categories }}
+        <a class='tags indigo' href='{{"/categories/"|relLangURL }}{{.|urlize}}'>
+			{{ . }}
+		</a>
+    {{ end }}
+    {{ range .Params.tags }}
+    <a class='tags indigo' href='{{"/tags/"|relLangURL }}{{.|urlize}}'>
+		{{ . }}
+    </a>
+    {{ end }}
+
+</div>
+<audio src="{{ .Site.BaseURL }}backsound/{{ .Site.Params.mymusic }}.mp3" type="application/mp3" autoplay="1" wmode="transparent" width="0" height="0"></audio>

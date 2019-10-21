@@ -1,0 +1,92 @@
+baseURL = "https://iamqye.github.io"
+languageCode = "en-us"
+title = "I am Qye"
+description = "Welcome to my Blog"
+theme = "iamqye"
+disqusShortname = ""
+
+
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "public/"]
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+
+[params]
+    author = "I am Qye"
+    description = "Welcome to my Blog"
+	avatar = "iamqye.png"
+    favicon = "android-chrome-192x192"
+	icon180 = "apple-touch-icon"
+	icon32 = "favicon-32x32"
+	icon16 = "favicon-16x16"
+	manifest = "site.webmanifest"
+	iconsvg = "safari-pinned-tab"
+	browserconfig = "browserconfig"
+	adsenabled = "ca-pub-5344786818057722"
+	googleAnalytics = "UA-150614423-1"
+	mymusic = "dragonborn_comes" # change name your music default
+	undefined = "undefined" # change name your music error 404, 500 and etc
+	font1 = "Mina"
+	font2 = "Open Sans"
+	font3 = "Poppins"
+	font4 = "Ubuntu"
+
+# adjust these as you see fit
+[[menu.main]]
+    url = "/"
+    name = "Home"
+	weight = 1
+
+[[menu.main]]
+    url = "/posts/"
+    name = "Posts"
+	weight = 2
+	
+[[menu.main]]
+    url = "/portfolio/"
+    name = "Portfolio"
+	weight = 3
+
+[[menu.main]]
+    url = "/project/"
+    name = "Project"
+	weight = 4
+    
+[[menu.main]]
+    url = "/tags/"
+    name = "Tags"
+	weight = 5
+
+[[params.navigation.links]]
+      name = "404"
+      url = "404.html"
+	  
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+[[menu.icon]]
+	id = "iamqye"
+    url = "mailto:iamqye@gmail.com" #mailto:iamqye@gmail.com
+    name = "envelope"
+	weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/iamqye" #https://github.com/iamqye
+    name = "github"
+	weight = 2
+
+[[menu.icon]]
+    url = "https://twitter.com/iamqye" #https://twitter.com/iamqye
+    name = "twitter"
+	weight = 3
+
+[[menu.icon]]
+    url = "https://www.facebook.com/iamqye" #https://www.facebook.com/iamqye
+    name = "facebook"
+	weight = 4
+
+[[menu.icon]]
+    url = "https://www.instagram.com/iamqye" #https://www.instagram.com/iamqye
+    name = "instagram"
+	weight = 5

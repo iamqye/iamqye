@@ -1,0 +1,12 @@
+{{ partial "header" . }}
+
+<main class="text center">
+	<div class="undefined">
+		<div class="intro">
+    	    <img src="../img/404-error.png"/>
+        	<h2>Oops, an error has occurred. Page not found!</h2>
+	    </div>
+	</div>
+	<audio src="{{ .Site.BaseURL }}backsound/{{ .Site.Params.undefined }}.mp3" type="application/mp3" autoplay="1" wmode="transparent" width="0" height="0"></audio>
+</main>
+{{ partial "footer" . }}

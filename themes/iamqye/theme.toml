@@ -1,0 +1,19 @@
+# theme.toml template for a Hugo theme
+
+name = "I Am Qye"
+license = "MIT"
+licenselink = "https://github.com/iamqye/terminal-hugo/blob/master/LICENSE"
+description = "terminal hugo adalah simple blog by I am Qye"
+homepage = "https://iamqye.github.io/"
+tags = ["blog", "terminal", "hugo", "hugo themes"]
+min_version = "1.0.1"
+features = ["Awesome"]
+
+[author]
+  name = "I am Qye"
+  homepage = "https://iamqye.github.io"
+  
+[original]
+  author = "I am Qye"
+  homepage = "https://iamqye.github.io/"
+  repo = "https://github.com/iamqye/terminal-hugo"

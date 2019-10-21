@@ -1,0 +1,18 @@
+{{ partial "header" . }}
+
+<div class="sitepage text center">
+
+<img class="img-avatar" src="{{ .Site.BaseURL }}img/{{ .Site.Params.avatar }}" alt="Kalera... ndak basobok gambare dee"/>        
+<h1 class="whoami">{{ .Title }}</h1>
+	<div class="social">
+	{{ if .Site.Menus.icon }}
+			{{ range sort .Site.Menus.icon }}
+				<a href="{{ .URL }}"><i class="fa fa-{{ .Name }}" target="_blank"></i></a>
+			{{ end }}
+	{{ end }}
+	
+	</div>
+
+</div>	
+<audio src="{{ .Site.BaseURL }}backsound/{{ .Site.Params.mymusic }}.mp3" type="application/mp3" autoplay="1" wmode="transparent" width="0" height="0"></audio>	
+{{ partial "footer" . }}
